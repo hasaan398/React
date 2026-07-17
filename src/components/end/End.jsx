@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./End.css";
+import "./end.css";
 import logo from "../../assets/logo-grey.png";  /* white bg wala logo */
 import { FaYoutube, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 

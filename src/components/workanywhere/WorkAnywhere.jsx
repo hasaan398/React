@@ -1,4 +1,4 @@
-import "./WorkAnywhere.css";
+import "./workAnywhere.css";
 import mobileImg from "../../assets/mobile.png";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 

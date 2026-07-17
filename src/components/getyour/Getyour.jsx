@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Getyour.css";
+import "./getyour.css";
 import growthImg from "../../assets/Desktop.png";
 import i1 from "../../assets/i1.png";
 import i2 from "../../assets/i2.png";

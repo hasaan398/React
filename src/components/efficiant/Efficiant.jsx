@@ -1,4 +1,4 @@
-import "./Efficiant.css";
+import "./efficiant.css";
 import collabImg from "../../assets/right.png"; // apna image yahan import karo
 
 export default function Efficiant() {
