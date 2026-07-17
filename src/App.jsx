@@ -5,7 +5,7 @@ import WorkAnywhere from "./components/workanywhere/WorkAnywhere";
 import Feature from "./components/feature/Feature";
 import Getyour from "./components/getyour/Getyour";
 import End from "./components/end/End";
-
+import "./App.css";
 
 function App() {
   return (
