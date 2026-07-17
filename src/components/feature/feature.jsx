@@ -1,4 +1,4 @@
-import "./feature.css";  // lowercase
+import "./feature.css";
 
 // Feature images (p1-p6)
 import p1 from "../../assets/p1.png";
