@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
+
+/* ── HERO WRAPPER ─────────────────────────────────────── */
+.hero {
+  background-color: #701A75;
+  position: relative;
+  overflow: hidden;
+  padding: 72px 24px 60px;
+  text-align: center;
+}
+
+/* ── BOTTOM CURVE IMAGE ───────────────────────────────── */
+.hero-bottom-curve {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── DECORATIVE LINE ──────────────────────────────────── */
+.hero-line {
+  position: absolute;
+  top: 50%;        /* mockup ke neeche walay hissa */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;          /* full section width */
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── DECORATIVE CIRCLES ───────────────────────────────── */
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 60px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+.hero-circle--left {
+  width: 520px;
+  height: 520px;
+  bottom: -120px;
+  left: -180px;
+}
+.hero-circle--right {
+  width: 420px;
+  height: 420px;
+  top: -100px;
+  right: -140px;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ── CONTENT ──────────────────────────────────────────── */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── TITLE ────────────────────────────────────────────── */
+.hero-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 110%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+/* ── SUBTITLE ─────────────────────────────────────────── */
+.hero-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+}
+
+/* ── CTA BUTTON ───────────────────────────────────────── */
+.hero-btn {
+  display: inline-block;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 56px;
+  transition: background 0.2s, transform 0.15s;
+}
+.hero-btn:hover {
+  background-color: #2d2d4e;
+  transform: translateY(-2px);
+}
+
+/* ── MOCKUP WRAP ──────────────────────────────────────── */
+.hero-mockup-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-mockup {
+  position: relative;
+  z-index: 3;
+}
+.hero-mockup img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px 16px 0 0;
+}
+
+/* ── LOGOS STRIP ──────────────────────────────────────── */
+.hero-logos {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 28px 40px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-logos img {
+  display: block;
+  max-width: 680px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 56px; }
+  .hero-subtitle { font-size: 24px; }
+}
+@media (max-width: 768px) {
+  .hero { padding: 48px 20px 40px; }
+  .hero-title { font-size: 38px; }
+  .hero-subtitle { font-size: 18px; }
+  .hero-btn { padding: 12px 28px; margin-bottom: 40px; }
+
+  .hero-circle--left { width: 300px; height: 300px; left: -120px; bottom: -60px; }
+  .hero-circle--right { width: 250px; height: 250px; right: -80px; top: -60px; }
+}
+@media (max-width: 480px) {
+  .hero-title { font-size: 28px; }
+  .hero-subtitle { font-size: 15px; }
+  .hero-logos { padding: 20px 16px; }
+}

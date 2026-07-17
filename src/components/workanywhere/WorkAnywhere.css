@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
+
+/* ── SECTION ──────────────────────────────────────────── */
+.work-anywhere {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px;
+}
+
+/* ── CONTENT ROW ──────────────────────────────────────── */
+.work-anywhere-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ── TEXT (LEFT) ──────────────────────────────────────── */
+.work-anywhere-text {
+  flex: 1;
+}
+
+.work-anywhere-heading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 110%;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+}
+
+.work-anywhere-description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+  color: #555555;
+  margin-bottom: 36px;
+}
+
+/* ── STORE BUTTONS ────────────────────────────────────── */
+.work-anywhere-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 2px solid #1a1a2e;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a1a2e;
+  transition: background 0.2s, color 0.2s;
+  min-width: 140px;
+}
+
+.store-btn:hover {
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+.store-btn-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.store-btn-text small {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.store-btn-text strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ── IMAGE (RIGHT) ────────────────────────────────────── */
+.work-anywhere-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-anywhere-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* ── CTA BANNER ───────────────────────────────────────── */
+.cta-banner {
+  width: 100%;
+  background-color: #34A8E0; /* Figma blue */
+  padding: 72px 24px;
+  text-align: center;
+  margin-top: 80px; /* spacing from WorkAnywhere section */
+}
+
+.cta-banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 16px;
+}
+
+.cta-banner-heading {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 110%;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cta-banner-sub {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.cta-banner-btn {
+  margin-top: 8px;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cta-banner-btn:hover {
+  background-color: #2d2d4e;
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .work-anywhere {
+    padding: 60px 40px;
+  }
+  .work-anywhere-content {
+    gap: 48px;
+  }
+  .work-anywhere-heading {
+    font-size: 42px;
+  }
+  .work-anywhere-description {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-anywhere {
+    padding: 48px 20px;
+  }
+  .work-anywhere-content {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .work-anywhere-heading {
+    font-size: 32px;
+        text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .work-anywhere-description {
+    font-size: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+
+  .work-anywhere-image img {
+    max-width: 340px;
+  }
+  .cta-banner {
+    padding: 48px 20px;
+  }
+  .cta-banner-heading {
+    font-size: 32px;
+  }
+  .cta-banner-sub {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-anywhere-heading {
+    font-size: 26px;
+    text-align: center;
+  }
+  .work-anywhere-description {
+    font-size: 15px;
+    text-align: center;
+  }
+  .work-anywhere-btns {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .store-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .cta-banner-heading {
+    font-size: 26px;
+  }
+  .cta-banner-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

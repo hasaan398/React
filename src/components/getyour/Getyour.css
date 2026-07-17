@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
+
+/* ── SECTION ──────────────────────────────────────────── */
+.business-growth {
+  width: 100%;
+  background-color: #fff;
+}
+
+.business-growth-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px 0;
+}
+
+/* ── HEADING ──────────────────────────────────────────── */
+.business-growth-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 110%;
+}
+
+.business-growth-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+  margin: 0 auto 48px;
+  max-width: 760px;
+}
+
+/* ── IMAGE BLOCK ──────────────────────────────────────── */
+.business-growth-image {
+  margin-bottom: 64px;
+}
+
+.image-bg {
+  background-color: #701A75;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  min-height: 340px;
+}
+
+.image-bg img {
+  width: 85%;
+  max-width: 860px;
+  height: auto;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 3 COLUMNS ────────────────────────────────────────── */
+.business-growth-columns {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+  max-width: 320px;
+}
+
+.column img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+.column h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.column p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ── TESTIMONIAL STRIP ────────────────────────────────── */
+.testimonial-strip {
+  background-color: #FBBF24;
+  padding: 72px 0 56px;
+  overflow: hidden;
+}
+
+.testimonial-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ── ARROWS ───────────────────────────────────────────── */
+.testi-arrow {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a2e;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  line-height: 1;
+}
+
+.testi-arrow:hover {
+  background: #701A75;
+  color: white;
+}
+
+/* ── TEXT ─────────────────────────────────────────────── */
+.testimonial-text {
+  flex: 1;
+}
+
+.testimonial-text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #1a1a2e;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-text strong {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1a1a2e;
+}
+
+.testimonial-text span {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #444;
+  margin-top: 4px;
+}
+
+/* ── IMAGE WRAPPER ────────────────────────────────────── */
+.testimonial-img-wrapper {
+  position: relative;
+  width: 400px;
+  height: 320px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Purple rotated diamond shape - Figma jaisa */
+.testi-purple-shape {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  background-color: #701A75;
+  border-radius: 40px;
+  transform: rotate(-20deg);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 0;
+}
+
+/* Actual image - shape ke upar */
+.testimonial-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* ── DOTS ─────────────────────────────────────────────── */
+.testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.testi-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.testi-dot.active {
+  background: #701A75;
+  width: 28px;
+  border-radius: 5px;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .business-growth-heading { font-size: 42px; }
+  .business-growth-description { font-size: 17px; }
+  .business-growth-content { padding: 60px 24px 0; }
+}
+
+@media (max-width: 768px) {
+  .business-growth-heading { font-size: 32px; }
+  .business-growth-description { font-size: 15px; }
+  .image-bg { min-height: 200px; }
+  .image-bg img { width: 100%; }
+
+  .business-growth-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding-bottom: 48px;
+  }
+  .column { max-width: 100%; }
+
+  .testimonial-strip { padding: 48px 0 40px; }
+  .testimonial-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+    gap: 24px;
+  }
+  .testi-arrow { display: none; }
+  .testimonial-text p { font-size: 16px; }
+  .testimonial-img-wrapper { width: 240px; height: 240px; }
+  .testi-purple-shape { width: 200px; height: 200px; }
+  .testimonial-img { width: 180px; height: 210px; }
+}
+
+@media (max-width: 480px) {
+  .business-growth-heading { font-size: 26px; }
+}
