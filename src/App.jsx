@@ -1,14 +1,10 @@
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
-import Efficiant from "./components/efficiant/Efficiant"; // naya section import
-import "./App.css";
+import Efficiant from "./components/efficiant/Efficiant";
 import WorkAnywhere from "./components/workanywhere/WorkAnywhere";
-import Getyour from "./components/getyour/Getyour"; // naya section import
 import Feature from "./components/feature/Feature";
-
+import Getyour from "./components/getyour/Getyour";
 import End from "./components/end/End";
-
-
 
 
 function App() {
