@@ -3,8 +3,9 @@
 .efficiant {
   width: 100%;
   background-color: #ffffff;
-  padding: 80px;
-  align-items: center;
+  padding: 80px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .efficiant-content {
@@ -12,12 +13,14 @@
   align-items: center;
   justify-content: center;
   gap: 80px;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .efficiant-image {
   flex: 1;
+  min-width: 0;
 }
 
 .efficiant-image img {
@@ -29,8 +32,7 @@
 
 .efficiant-text {
   flex: 1;
-  align-items: center;
-  justify-content: center;
+  min-width: 0;
 }
 
 .efficiant-heading {
@@ -38,7 +40,6 @@
   font-weight: 800;
   font-size: 56px;
   line-height: 110%;
-  letter-spacing: 0;
   color: #1a1a2e;
   margin-bottom: 16px;
 }
@@ -48,55 +49,25 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 180%;
-  letter-spacing: 0;
   color: #555;
+  margin: 0;
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
-  .efficiant {
-    padding: 60px 40px;
-  }
-  .efficiant-content {
-    gap: 48px;
-  }
-  .efficiant-heading {
-    font-size: 42px;
-  }
+  .efficiant { padding: 60px 40px; }
+  .efficiant-content { gap: 48px; }
+  .efficiant-heading { font-size: 42px; }
 }
 
-/* Mobile - text upar, image neeche */
 @media (max-width: 768px) {
-  .efficiant {
-    padding: 48px 20px;
-  }
-  .efficiant-content {
-    flex-direction: column-reverse; /* 👈 image neeche, text upar */
-    gap: 32px;
-  }
-  .efficiant-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .efficiant-heading {
-    font-size: 32px;
-    text-align: center;
-  }
-  .efficiant-description {
-    font-size: 16px;
-    text-align: center;
-  }
+  .efficiant { padding: 48px 20px; }
+  .efficiant-content { flex-direction: column-reverse; gap: 32px; }
+  .efficiant-text { text-align: center; }
+  .efficiant-heading { font-size: 32px; }
+  .efficiant-description { font-size: 16px; }
 }
 
 @media (max-width: 480px) {
-  .efficiant-heading {
-    font-size: 26px;
-    text-align: center;
-  }
-  .efficiant-description {
-    font-size: 15px;
-    text-align: center;
-  }
+  .efficiant-heading { font-size: 26px; }
+  .efficiant-description { font-size: 15px; }
 }
