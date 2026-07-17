@@ -1,6 +1,5 @@
 import "./efficiant.css";
-import collabImg from "../../assets/right.png"; // apna image yahan import karo
-
+import collabImg from "../../assets/right.png"; 
 export default function Efficiant() {
   return (
     <section className="efficiant">
