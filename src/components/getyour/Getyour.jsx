@@ -89,9 +89,20 @@ export default function BusinessGrowth() {
             <p>"{testimonials[active].quote}"</p>
             <strong>{testimonials[active].name}</strong>
             <span>{testimonials[active].role}</span>
+            
+            {/* Dots text ke bilkul sath hi rahenge aur mobile par uper hi center honge */}
+            <div className="testi-dots">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  className={`testi-dot ${i === active ? "active" : ""}`}
+                  onClick={() => setActive(i)}
+                />
+              ))}
+            </div>
           </div>
 
-          {/* 👇 Sirf image — koi purple shape div nahi */}
+          {/* Image wrapper - Mobile par automatic text ke niche load hoga */}
           <div className="testimonial-img-wrapper">
             <img
               src={mariaImg}
@@ -102,16 +113,6 @@ export default function BusinessGrowth() {
         </div>
 
         <button className={`testi-arrow testi-arrow--right ${clickedArrow === "right" ? "clicked" : ""}`} onClick={next}>&#8250;</button>
-
-        <div className="testi-dots">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              className={`testi-dot ${i === active ? "active" : ""}`}
-              onClick={() => setActive(i)}
-            />
-          ))}
-        </div>
 
       </div>
 

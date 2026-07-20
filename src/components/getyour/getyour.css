@@ -98,116 +98,113 @@
 /* ══ TESTIMONIAL ══ */
 .testimonial-strip {
   background-color: #FBBF24;
-
   position: relative;
-  overflow: visible; /* 👈 image bahar nikal sake */
+  overflow: visible;
+  padding: 40px 0;
 }
 
 .testimonial-inner {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
 }
 
-/* Arrows — section edges pe */
+/* Arrows */
 .testi-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none;      /* no background */
+  background: none;
   border: none;
-  width: 100px;
-  height: auto;
-  font-size: 80px;       /* bada simple arrow */
+  font-size: 64px;
   font-weight: 300;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;          /* white color */
-  transition: opacity 0.2s;
+  color: white;
+  transition: opacity 0.2s, color 0.2s;
   z-index: 10;
-  line-height: 1;
   padding: 0;
   opacity: 0.85;
 }
-.testi-arrow:hover{
-  color: #701A75;
-}
-.testi-arrow.clicked {
-  color: #721777;
-}
-.testi-arrow--left  { left: 16px; }
-.testi-arrow--right { right: 16px; }
-.testi-arrow:hover  { opacity: 1; }
 
-.testimonial-text { flex: 1; }
+.testi-arrow:hover {
+  color: #701A75;
+  opacity: 1;
+}
+
+.testi-arrow--left  { left: 32px; }
+.testi-arrow--right { right: 32px; }
+
+.testimonial-text { 
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .testimonial-text p {
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  line-height: 1.8;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.6;
   color: #1a1a2e;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 .testimonial-text strong {
   display: block;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   color: #1a1a2e;
 }
 
 .testimonial-text span {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
   margin-top: 4px;
 }
 
-/* Image wrapper — 560px tall, yellow sa bahar */
+/* Image wrapper */
 .testimonial-img-wrapper {
   flex-shrink: 0;
   display: flex;
-  align-items: flex-start; /* top se align */
+  align-items: flex-start;
   justify-content: center;
-  margin-top: -40px;   /* top se bahar nikal*/
-  overflow: hidden;    /* bottom se cut */
-  height: 480px;       /* yellow section ki height tak */
+  position: relative;
 }
 
 .testimonial-img {
   width: auto;
-  height: 560px;     /* Figma: 560px — bottom cut hogi */
+  height: 400px;
   display: block;
   object-fit: cover;
-  object-position: top;
+  border-radius: 20px;
 }
 
-/* Dots */
+/* Dots: Left aligned under text on desktop */
 .testi-dots {
-display: flex;
-    justify-content: center;
-    gap: 8px;
-    top: 80%;
-    left: 15%;
-    margin-top: 16px;
-    position: absolute;
-    z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 32px;
 }
 
 .testi-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   border: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
   padding: 0;
 }
 
@@ -223,21 +220,19 @@ display: flex;
   .business-growth-heading { font-size: 42px; }
   .business-growth-image   { padding: 0 24px; }
   .business-growth-columns { padding: 48px 24px 60px; }
-  .testimonial-inner       { padding: 0 60px; gap: 40px; }
-  .testimonial-img         { height: 460px; }
+  
+  .testimonial-inner       { padding: 0 80px; gap: 40px; }
+  .testimonial-text p     { font-size: 20px; }
+  .testimonial-img         { height: 340px; }
 }
 
 @media (max-width: 768px) {
   .business-growth-text        { padding: 48px 20px 32px; }
   .business-growth-heading     { font-size: 32px; }
   .business-growth-description { font-size: 15px; }
-  .business-growth-image       { padding: 0 20px; }
+  
   .image-bg                    { padding: 24px 20px 0; min-height: 200px; }
-
-  .testi-dots{
-    position: absolute;
-    top: 30%;
-  }
+  
   .business-growth-columns {
     flex-direction: column;
     align-items: center;
@@ -246,23 +241,45 @@ display: flex;
   }
   .column { max-width: 100%; }
 
-  .testimonial-strip  {  overflow: hidden; }
+  .testimonial-strip { padding: 48px 20px; }
+  
   .testimonial-inner  {
-    flex-direction: column;
-
-
-    gap: 24px;
+    flex-direction: column; /* Normal column direction se text uper aur image niche ayegi */
+    gap: 32px;
+    padding: 0;
   }
-  .testi-arrow           { display: none; }
-  .testimonial-text p    { font-size: 16px; }
+  
+  .testi-arrow { display: none; }
+  
+  .testimonial-text {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .testimonial-text p    { font-size: 18px; text-align: center; }
+  
+  /* Mobile Dots adjustment */
+  .testi-dots {
+
+    margin-top: 24px;
+    width: 100%;
+  }
+
   .testimonial-img-wrapper {
-    margin-top: 0;
-    margin-bottom: 0;
+    width: 100%;
+    margin-top: 12px; /* Text aur image ke beech halka space */
   }
-  .testimonial-img { height: 450px; }
+
+  .testimonial-img { 
+    height: 320px; 
+    width: 100%; 
+    max-width: 340px; 
+  }
 }
 
 @media (max-width: 480px) {
   .business-growth-heading { font-size: 26px; }
-  .testimonial-img { height: 450px; }
+  .testimonial-text p    { font-size: 16px; }
+  .testimonial-img       { height: 280px; }
 }
