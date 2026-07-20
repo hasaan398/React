@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
+import { FaChevronDown } from "react-icons/fa"; // Dropdown arrow icon import kiya
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,26 @@ export default function Navbar() {
           <img src={logo} alt="Protech Logo" />
         </div>
 
-        {/* Hamburger - mobile only */}
+        {/* Nav Links */}
+        <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
+          <li>
+            <a href="#" className="dropdown-link">
+              Products <FaChevronDown className="dropdown-arrow" />
+            </a>
+          </li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Pricing</a></li>
+          {/* Mobile standard button inside menu */}
+          <li className="navbar-mobile-btn" style={{ display: 'none' }}>
+            <a href="#" className="navbar-btn" style={{ display: 'block' }}>Request Demo</a>
+          </li>
+        </ul>
+
+        {/* CTA Button (Desktop only) */}
+        <a href="#" className="navbar-btn">Request Demo</a>
+
+        {/* Hamburger - Mobile only */}
         <button
           className={`navbar-hamburger ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -24,17 +44,6 @@ export default function Navbar() {
           <span></span>
           <span></span>
         </button>
-
-        {/* Nav Links */}
-        <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Solutions</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Pricing</a></li>
-        </ul>
-
-        {/* CTA Button */}
-        <a href="#" className="navbar-btn">Request Demo</a>
 
       </div>
     </nav>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./end.css";
 import logo from "../../assets/logo-grey.png";  /* white bg wala logo */
-import { FaYoutube, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const faqs = [
   "Enim sodales consequat adipiscing facilisis massa venenatis, non lorem lobortis?",
@@ -36,8 +36,9 @@ export default function End() {
                   onClick={() => setOpen(open === i ? null : i)}
                 >
                   <span>{q}</span>
-              
-                  <span className="faq-icon">{open === i ? <span style={{fontSize: "15px", fontWeight: "bold", width:"50px"}}>^</span> : <span style={{fontSize: "15px", fontWeight: "bold"}}>v</span>}</span>
+                  <span className="faq-icon">
+                    {open === i ? <FaChevronUp /> : <FaChevronDown />}
+                  </span>
                 </button>
                 {open === i && (
                   <div className="faq-answer">

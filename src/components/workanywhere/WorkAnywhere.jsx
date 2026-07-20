@@ -1,12 +1,14 @@
 import "./workanywhere.css";
 import mobileImg from "../../assets/mobile.png";
-import { FaApple, FaGooglePlay } from "react-icons/fa";
+import appleImg from "../../assets/apple.png";
+import gplayImg from "../../assets/gplay.png";
 
 export default function WorkAnywhere() {
   return (
     <>
       <section className="work-anywhere">
         <div className="work-anywhere-content">
+
           {/* Text - left side */}
           <div className="work-anywhere-text">
             <h2 className="work-anywhere-heading">Work from anywhere</h2>
@@ -16,21 +18,13 @@ export default function WorkAnywhere() {
               viverra a, neque orci.
             </p>
 
-            {/* Store Buttons */}
+            {/* Store Buttons - real images */}
             <div className="work-anywhere-btns">
-              <a href="#" className="store-btn">
-                <FaApple className="store-icon" />
-                <div className="store-btn-text">
-                  <small>Download on the</small>
-                  <strong>App Store</strong>
-                </div>
+              <a href="#" className="store-btn-img">
+                <img src={appleImg} alt="Download on the App Store" />
               </a>
-              <a href="#" className="store-btn">
-                <FaGooglePlay className="store-icon" />
-                <div className="store-btn-text">
-                  <small>Get it on</small>
-                  <strong>Google Play</strong>
-                </div>
+              <a href="#" className="store-btn-img">
+                <img src={gplayImg} alt="Get it on Google Play" />
               </a>
             </div>
           </div>
@@ -39,10 +33,11 @@ export default function WorkAnywhere() {
           <div className="work-anywhere-image">
             <img src={mobileImg} alt="Work from anywhere mobile app" />
           </div>
+
         </div>
       </section>
 
-      {/* CTA Banner - separate sibling */}
+      {/* CTA Banner */}
       <div className="cta-banner">
         <div className="cta-banner-content">
           <h2 className="cta-banner-heading">All the tech & design tools combined</h2>
@@ -53,4 +48,3 @@ export default function WorkAnywhere() {
     </>
   );
 }
-

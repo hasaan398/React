@@ -26,68 +26,82 @@ const testimonials = [
 
 export default function BusinessGrowth() {
   const [active, setActive] = useState(0);
+  const [clickedArrow, setClickedArrow] = useState(null);
 
-  const prev = () => setActive((active - 1 + testimonials.length) % testimonials.length);
-  const next = () => setActive((active + 1) % testimonials.length);
+  const prev = () => {
+    setActive((active - 1 + testimonials.length) % testimonials.length);
+    setClickedArrow("left");
+    setTimeout(() => setClickedArrow(null), 300);
+  };
+
+  const next = () => {
+    setActive((active + 1) % testimonials.length);
+    setClickedArrow("right");
+    setTimeout(() => setClickedArrow(null), 300);
+  };
 
   return (
     <section className="business-growth">
-      <div className="business-growth-content">
 
+      {/* Heading + desc */}
+      <div className="business-growth-text">
         <h2 className="business-growth-heading">Get your business to grow fast</h2>
         <p className="business-growth-description">
           Aliquet id quam amet, augue netus tristique elementum eros urna. Dignissim nisl mauris cras feugiat
           congue at euismod donec. Lectus interdum nibh laoreet nunc bibendum volutpat.
         </p>
-
-        <div className="business-growth-image">
-          <div className="image-bg">
-            <img src={growthImg} alt="Business growth illustration" />
-          </div>
-        </div>
-
-        <div className="business-growth-columns">
-          <div className="column">
-            <img src={i1} alt="Feature 1" />
-            <h3>Nisl arcu nunc</h3>
-            <p>Dui consectetur gravida platea et duis diam. Enim morbi prom auctor et.</p>
-          </div>
-          <div className="column">
-            <img src={i2} alt="Feature 2" />
-            <h3>Dui scelerisque</h3>
-            <p>Et at duis vestibulum prom. Sollicitudin velit, etiam a feugiat sagittis.</p>
-          </div>
-          <div className="column">
-            <img src={i3} alt="Feature 3" />
-            <h3>Ac proin at</h3>
-            <p>Elit purus magna donec mattis amet, leo varius sed. UI metus sed convallis.</p>
-          </div>
-        </div>
-
       </div>
 
-      {/* Testimonial */}
+      {/* Mockup */}
+      <div className="business-growth-image">
+        <div className="image-bg">
+          <img src={growthImg} alt="Business growth illustration" />
+        </div>
+      </div>
+
+      {/* 3 columns */}
+      <div className="business-growth-columns">
+        <div className="column">
+          <img src={i1} alt="Feature 1" />
+          <h3>Nisl arcu nunc</h3>
+          <p>Dui consectetur gravida platea et duis diam. Enim morbi prom auctor et.</p>
+        </div>
+        <div className="column">
+          <img src={i2} alt="Feature 2" />
+          <h3>Dui scelerisque</h3>
+          <p>Et at duis vestibulum prom. Sollicitudin velit, etiam a feugiat sagittis.</p>
+        </div>
+        <div className="column">
+          <img src={i3} alt="Feature 3" />
+          <h3>Ac proin at</h3>
+          <p>Elit purus magna donec mattis amet, leo varius sed. UI metus sed convallis.</p>
+        </div>
+      </div>
+
+      {/* TESTIMONIAL */}
       <div className="testimonial-strip">
+
+        <button className={`testi-arrow testi-arrow--left ${clickedArrow === "left" ? "clicked" : ""}`} onClick={prev}>&#8249;</button>
+
         <div className="testimonial-inner">
-
-          <button className="testi-arrow" onClick={prev}>&#8249;</button>
-
+          {/* Text left */}
           <div className="testimonial-text">
             <p>"{testimonials[active].quote}"</p>
             <strong>{testimonials[active].name}</strong>
             <span>{testimonials[active].role}</span>
           </div>
 
-          {/* Image + purple shape behind it */}
+          {/* 👇 Sirf image — koi purple shape div nahi */}
           <div className="testimonial-img-wrapper">
-            {/* Purple rotated shape - behind image */}
-            <div className="testi-purple-shape"></div>
-            <img src={mariaImg} alt={testimonials[active].name} className="testimonial-img" />
+            <img
+              src={mariaImg}
+              alt={testimonials[active].name}
+              className="testimonial-img"
+            />
           </div>
-
-          <button className="testi-arrow" onClick={next}>&#8250;</button>
-
         </div>
+
+        <button className={`testi-arrow testi-arrow--right ${clickedArrow === "right" ? "clicked" : ""}`} onClick={next}>&#8250;</button>
 
         <div className="testi-dots">
           {testimonials.map((_, i) => (
@@ -98,6 +112,7 @@ export default function BusinessGrowth() {
             />
           ))}
         </div>
+
       </div>
 
     </section>

@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap');
-*{
-    font-family: 'Roboto', sans-serif;
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 /* ── SECTION ──────────────────────────────────────────── */
 .work-anywhere {
   width: 100%;
   background-color: #ffffff;
-  padding: 80px;
+  padding: 80px 40px;
 }
 
 /* ── CONTENT ROW ──────────────────────────────────────── */
@@ -15,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 80px;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -25,7 +30,6 @@
 }
 
 .work-anywhere-heading {
-  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   font-size: 56px;
   line-height: 110%;
@@ -34,7 +38,6 @@
 }
 
 .work-anywhere-description {
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 180%;
@@ -49,38 +52,19 @@
   flex-wrap: wrap;
 }
 
-.store-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-  border: 2px solid #1a1a2e;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #1a1a2e;
-  transition: background 0.2s, color 0.2s;
-  min-width: 140px;
+.store-btn-img {
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
-.store-btn:hover {
-  background-color: #1a1a2e;
-  color: #ffffff;
+.store-btn-img:hover {
+  transform: translateY(-2px);
 }
 
-.store-btn-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.store-btn-text small {
-  font-size: 10px;
-  opacity: 0.7;
-}
-
-.store-btn-text strong {
-  font-size: 14px;
-  font-weight: 700;
+.store-btn-img img {
+  height: 48px; /* Store buttons height standard control */
+  width: auto;
+  display: block;
 }
 
 /* ── IMAGE (RIGHT) ────────────────────────────────────── */
@@ -95,6 +79,7 @@
   width: 100%;
   max-width: 500px;
   height: auto;
+  display: block;
 }
 
 /* ── CTA BANNER ───────────────────────────────────────── */
@@ -103,16 +88,14 @@
   background-color: #0284C7; /* Figma blue */
   padding: 72px 24px;
   text-align: center;
-  margin-top: 80px; /* spacing from WorkAnywhere section */
 }
 
 .cta-banner-content {
-  font-family: "ro";
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
   gap: 16px;
 }
 
@@ -155,43 +138,46 @@
     padding: 60px 40px;
   }
   .work-anywhere-content {
-    gap: 48px;
+    gap: 40px;
   }
   .work-anywhere-heading {
     font-size: 42px;
   }
   .work-anywhere-description {
-    font-size: 17px;
+    font-size: 18px;
+  }
+  .cta-banner-heading {
+    font-size: 42px;
   }
 }
 
 @media (max-width: 768px) {
   .work-anywhere {
-    padding: 48px 20px;
+    padding: 60px 24px 40px;
   }
   .work-anywhere-content {
-    flex-direction: column;
-    gap: 36px;
+    flex-direction: column; /* Stack vertically on tablet/mobile */
+    gap: 48px;
+    text-align: center;
   }
   .work-anywhere-heading {
-    font-size: 32px;
-        text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 36px;
   }
   .work-anywhere-description {
     font-size: 16px;
-    text-align: center;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 600px;
   }
-
+  .work-anywhere-btns {
+    justify-content: center; /* Center align buttons on mobile */
+  }
   .work-anywhere-image img {
-    max-width: 340px;
+    max-width: 360px;
   }
+  
   .cta-banner {
-    padding: 48px 20px;
+    padding: 56px 20px;
   }
   .cta-banner-heading {
     font-size: 32px;
@@ -203,26 +189,24 @@
 
 @media (max-width: 480px) {
   .work-anywhere-heading {
-    font-size: 26px;
-    text-align: center;
+    font-size: 28px;
   }
   .work-anywhere-description {
     font-size: 15px;
-    text-align: center;
+    margin-bottom: 28px;
   }
-  .work-anywhere-btns {
-    flex-direction: column;
-    gap: 12px;
+  .store-btn-img img {
+    height: 42px; /* Small layout compatibility */
   }
-  .store-btn {
-    width: 100%;
-    justify-content: center;
+  .work-anywhere-image img {
+    max-width: 280px;
   }
   .cta-banner-heading {
-    font-size: 26px;
+    font-size: 24px;
   }
   .cta-banner-btn {
     width: 100%;
-    text-align: center;
+    max-width: 240px;
+    box-sizing: border-box;
   }
 }

@@ -8,8 +8,7 @@ export default function Hero() {
   return (
     <>
       <section className="hero">
-        <div className="hero-circle hero-circle--left"></div>
-        <div className="hero-circle hero-circle--right"></div>
+
 
         <div className="hero-content">
           <h1 className="hero-title">
