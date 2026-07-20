@@ -190,9 +190,9 @@
 
 .footer-col h5 {
   font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
-  color: #374151;
+  color: #94A3B8;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -201,7 +201,7 @@
 .footer-col a {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #555555;
+  color: #0F172A;
   text-decoration: none;
   transition: color 0.2s;
   line-height: 1.4;
@@ -293,12 +293,12 @@
     gap: 24px;
   }
   
-  .footer-bottom { 
+  /* .footer-bottom { 
     flex-direction: column; 
     align-items: center; 
     text-align: center;
     gap: 16px; 
-  }
+  } */
 
   .footer-bottom-right {
     flex-direction: column;
