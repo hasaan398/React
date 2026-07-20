@@ -84,17 +84,21 @@ export default function End() {
 
         <div className="footer-bottom">
           <span className="footer-copy">© 2023 Protech Inc. All rights reserved.</span>
-          <div className="footer-legal">
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">Contact</a>
-          </div>
-          <div className="footer-social">
-            <a href="#" aria-label="YouTube"><FaYoutube /></a>
-            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="#" aria-label="Twitter"><FaTwitter /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+          
+          {/* Figma wrapper block taake legal aur social right side par stick ho sakein */}
+          <div className="footer-bottom-right">
+            <div className="footer-legal">
+              <a href="#">Terms</a>
+              <a href="#">Privacy</a>
+              <a href="#">Contact</a>
+            </div>
+            <div className="footer-social">
+              <a href="#" aria-label="YouTube"><FaYoutube /></a>
+              <a href="#" aria-label="Facebook"><FaFacebookF /></a>
+              <a href="#" aria-label="Twitter"><FaTwitter /></a>
+              <a href="#" aria-label="Instagram"><FaInstagram /></a>
+              <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            </div>
           </div>
         </div>
       </footer>

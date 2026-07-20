@@ -32,31 +32,22 @@
   max-width: 760px;
 }
 
+/* ── NEW MOCKUP IMAGE STYLING (No Purple Background Needed) ── */
 .business-growth-image {
   width: 100%;
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-
-.image-bg {
-  background-color: #701A75;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-  min-height: 340px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 60px 0;
+  padding: 0 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
-.image-bg img {
+.get-mockup-img {
   width: 100%;
-  max-width: 900px;
   height: auto;
   display: block;
-  border-radius: 12px 12px 0 0;
+  object-fit: contain;
 }
 
 .business-growth-columns {
@@ -230,8 +221,7 @@
   .business-growth-text        { padding: 48px 20px 32px; }
   .business-growth-heading     { font-size: 32px; }
   .business-growth-description { font-size: 15px; }
-  
-  .image-bg                    { padding: 24px 20px 0; min-height: 200px; }
+  .business-growth-image       { padding: 0 20px; }
   
   .business-growth-columns {
     flex-direction: column;
@@ -244,7 +234,7 @@
   .testimonial-strip { padding: 48px 20px; }
   
   .testimonial-inner  {
-    flex-direction: column; /* Normal column direction se text uper aur image niche ayegi */
+    flex-direction: column; /* Normal layout sequence: Text aur dots uper, image niche */
     gap: 32px;
     padding: 0;
   }
@@ -259,16 +249,16 @@
   
   .testimonial-text p    { font-size: 18px; text-align: center; }
   
-  /* Mobile Dots adjustment */
+  /* Mobile Dots center tracking */
   .testi-dots {
-
+    justify-content: center;
     margin-top: 24px;
     width: 100%;
   }
 
   .testimonial-img-wrapper {
     width: 100%;
-    margin-top: 12px; /* Text aur image ke beech halka space */
+    margin-top: 12px;
   }
 
   .testimonial-img { 

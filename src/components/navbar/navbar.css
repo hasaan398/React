@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+/* Global Reset for Sticky/Fixed Navbar */
+body {
+  margin: 0;
+  padding-top: 72px; /* Navbar fixed hone ki wajah se content chupne se bachane ke liye */
+}
+
 .navbar {
   background-color: #701A75;
   width: 100%;
-  position: sticky;
+  position: fixed; /* Pure page par top par fixed rahegi */
   top: 0;
-  z-index: 1000;
+  left: 0;
+  z-index: 9999; /* Kisi bhi section ke upar dikhne ke liye */
   box-sizing: border-box;
-  border-bottom: none;
 }
 
 .navbar-container {
@@ -17,7 +23,7 @@
   height: 72px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Links aur buttons ko sahi spacing dene ke liye */
+  justify-content: space-between;
 }
 
 /* ── LOGO ── */
@@ -56,6 +62,23 @@
   opacity: 0.75;
 }
 
+/* ── DROPDOWN LINK ALIGNMENT ── */
+.dropdown-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-arrow {
+  font-size: 11px;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-link:hover .dropdown-arrow {
+  opacity: 1;
+}
+
 /* ── CTA BUTTON ── */
 .navbar-btn {
   font-family: 'Roboto', sans-serif;
@@ -86,10 +109,10 @@
   gap: 5px;
   background: none;
   cursor: pointer;
-  border: 2px solid #ffffff; /* Same border jo button per ha */
-  border-radius: 6px;       /* Same radius jo button per ha */
-  width: 44px;              /* Square look */
-  height: 44px;             /* Square look */
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   transition: background-color 0.2s ease;
 }
@@ -117,51 +140,29 @@
 .navbar-hamburger.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
-/* ── DROPDOWN LINK ALIGNMENT ── */
-.dropdown-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px; /* Text aur arrow ke beech ka gap */
-}
 
-.dropdown-arrow {
-  font-size: 11px; /* Figma ke size ke mutabik chota arrow */
-  opacity: 0.8;
-  transition: transform 0.2s ease;
-}
-
-/* Optional: agar hover par arrow rotate karna chahein to toggle effects lag sakte hain */
-.dropdown-link:hover .dropdown-arrow {
-  opacity: 1;
-}
-
-/* Mobile responsive handling for dropdown icon alignment */
-@media (max-width: 768px) {
-  .dropdown-link {
-    display: flex;
-    justify-content: space-between; /* Mobile checklist layout mein adjust karne ke liye */
-    align-items: center;
-    width: 100%;
-  }
-}
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  body {
+    padding-top: 64px; /* Mobile height adjustment */
+  }
+
   .navbar-container {
     padding: 0 20px;
     height: 64px;
   }
 
   .navbar-hamburger {
-    display: flex; /* Mobile par ab border ke sath show hoga */
+    display: flex;
   }
 
   .navbar-btn {
-    display: none; /* Desktop button chhup jayega */
+    display: none;
   }
 
   .navbar-links {
     display: none;
-    position: absolute;
+    position: fixed; /* Fixed taake scroll karne par dropdown bhi sath chale */
     top: 64px;
     left: 0;
     width: 100%;
@@ -171,6 +172,8 @@
     gap: 0;
     padding: 8px 20px 24px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+    box-sizing: border-box;
   }
 
   .navbar-links.open {
@@ -187,7 +190,13 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
 
-  /* Mobile Dropdown ke andar "Request Demo" button show karne ke liye */
+  .dropdown-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Mobile Dropdown Button */
   .navbar-mobile-btn {
     display: block !important;
     text-align: center;

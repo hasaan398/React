@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
-import { FaChevronDown } from "react-icons/fa"; // Dropdown arrow icon import kiya
+import { FaChevronDown } from "react-icons/fa"; // Dropdown arrow icon
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./getyour.css";
-import growthImg from "../../assets/Desktop.png";
+import getImg from "../../assets/get.png"; // Nayi full mockup image import ki
 import i1 from "../../assets/i1.png";
 import i2 from "../../assets/i2.png";
 import i3 from "../../assets/i3.png";
@@ -52,11 +52,9 @@ export default function BusinessGrowth() {
         </p>
       </div>
 
-      {/* Mockup */}
+      {/* Mockup (Purple bg removed, directly rendering the new full image) */}
       <div className="business-growth-image">
-        <div className="image-bg">
-          <img src={growthImg} alt="Business growth illustration" />
-        </div>
+        <img src={getImg} alt="Business growth illustration" className="get-mockup-img" />
       </div>
 
       {/* 3 columns */}
@@ -90,7 +88,7 @@ export default function BusinessGrowth() {
             <strong>{testimonials[active].name}</strong>
             <span>{testimonials[active].role}</span>
             
-            {/* Dots text ke bilkul sath hi rahenge aur mobile par uper hi center honge */}
+            {/* Dots */}
             <div className="testi-dots">
               {testimonials.map((_, i) => (
                 <button
